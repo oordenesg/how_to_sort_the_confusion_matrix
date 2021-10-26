@@ -22,3 +22,8 @@ Person who has covid19 and the model classified it as covid19 (+). This would be
 Person who does not have covid19 and the model classifies it as covid19 (-). This would be a true negative or a TN.
 Person who has covid19 and the model classified it as covid19 (-). This would be a type II error or false negative or FN.
 Person who does not have covid19 and the model classified it as covid19 (+). This is a type I error, or false positive, or FP.
+
+## What technique can we use to solve this problem?
+
+We can use the Hungarian method. The aim of this method is to find the minimum cost of a set of tasks that must be carried out by the most suitable people.
+It uses linear programming (PL) to perform a series of steps that can be automated. Thus, tools such as the statistical software R (among others) have several very useful packages for these optimization problems.
