@@ -27,3 +27,11 @@ Person who does not have covid19 and the model classified it as covid19 (+). Thi
 
 We can use the Hungarian method. The aim of this method is to find the minimum cost of a set of tasks that must be carried out by the most suitable people.
 It uses linear programming (PL) to perform a series of steps that can be automated. Thus, tools such as the statistical software R (among others) have several very useful packages for these optimization problems.
+
+The steps to follow allow to carry out the Hungarian method in a simple way using a spreadsheet. In addition, this scheme that we show will allow us to see in a global way the process that we will develop in detail in the final example.
+
+As preliminary steps, you have to assign people (rows) to a series of projects (columns). In addition, it is necessary to calculate the different costs of each project depending on who carries it out and build a matrix (C) with this information.
+In the matrix (C) we look for the minimum value of each row. We subtract this from all the elements in the row and perform the same operation with the columns. A new matrix (C) will appear with the results of the previous operations.
+Next we create the «graph of equalities», which allows us to choose the tasks and projects with the lowest cost. The optimum would be those elements whose result was zero. If it is true that there is no element with a zero value assigned to more than one row, the algorithm ends.
+If not, a new assignment must be made. A new matrix is made to which a series of modifications are applied, as we will see in the example. We recreate the graph and continue until we have a matrix that has at least one zero in each row and in non-repeating positions.
+With this information we already have the people and projects assigned (the zeros) that optimize the problem. If a task is already assigned in a previous row, it is discarded in the next. To calculate the minimum cost we add the costs of the initial matrix that appear in the position of these zeros.
